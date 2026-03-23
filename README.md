@@ -8,7 +8,9 @@ My personal portfolio showcasing my projects and skills as a Web Developer.
 - Contact section
 
 ##  Tech
-HTML, CSS, JavaScript
+HTML
+CSS
+JavaScript
 
 ## 🔗 Live
 https://thirisha1405.github.io/portfolio/
