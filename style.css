@@ -6,6 +6,7 @@
 }
 html{
     scroll-behavior:smooth;
+    scroll-padding-top: 80px;
 }
 
 body{
@@ -31,6 +32,11 @@ display:flex;
 gap:20px;
 list-style:none;
 }
+nav ul li:nth-child(1) a { animation-delay: 0.2s; }
+nav ul li:nth-child(2) a { animation-delay: 0.4s; }
+nav ul li:nth-child(3) a { animation-delay: 0.6s; }
+nav ul li:nth-child(4) a { animation-delay: 0.8s; }
+nav ul li:nth-child(5) a { animation-delay: 1s; }
 
 nav a{
 text-decoration:none;
@@ -75,6 +81,7 @@ nav a:hover{
     font-size: 30px;
     font-weight: 700;
     margin: 5px 0;
+    letter-spacing: 1px;
     opacity: 1;
     animation: slideBottom 1s ease forwards;
     animation-delay: .7s;
@@ -92,6 +99,7 @@ nav a:hover{
     font-size: 55px;
     font-weight: 700;
     margin: 10px 0;
+    letter-spacing: 1px;
     opacity: 0;
     animation: slideRight 1s ease forwards;
     animation-delay: 1s;
@@ -101,9 +109,14 @@ nav a:hover{
     max-width: 450px;
     line-height: 1.3;
     font-size: 18px;
+    letter-spacing: 1px;
+    opacity: 0;
     animation: slideLeft 1s ease forwards;
-    animation-delay: 1s;
+
 }
+.home-sci a:nth-child(1){ animation-delay: 0.2s; }
+.home-sci a:nth-child(2){ animation-delay: 0.4s; }
+
 .home-sci a {
     display: inline-flex;
     justify-content: center;
@@ -117,13 +130,12 @@ nav a:hover{
     color: #0ef;
     text-decoration: none;
     animation: slideLeft 1s ease forwards;
-    animation-delay: calc(.3s * var(--i));
     margin: 30px 15px 30px 0;
 }
 .home-sci a:hover{
     background: #0ef;
     color:#081b29;
-    box-sizing: 0 0 20px #0ef;
+    box-shadow: 0 0 20px #0ef;
 }
 
 
@@ -138,16 +150,17 @@ nav a:hover{
     letter-spacing: 1px;
     text-decoration: none;
     font-weight: 600;
-    opacity: 1;
+    opacity: 0;
     animation: slideTop 1s ease forwards;
     animation-delay: 1s;
     box-shadow: 0 0 5px #0ef,
     0 0 15px #0ef;
+    transition: 0.3s;
 }
 .btn-box:hover{
     box-shadow: 0 0 5px cyan,
     0 0 25px cyan;
-
+    transform: scale(1.05);
 }
 
 .about{
@@ -165,12 +178,11 @@ nav a:hover{
     line-height: 1.4;
     margin-bottom: 4rem;
     padding: 5px;
-    
 }
 
 /* Sections */
 section{
-padding:100px 20px;
+padding:120px 20px;
 text-align:center;
 }
 
@@ -271,12 +283,13 @@ background-color: transparent;
 padding: 20px;
 width: 300px;
 font-size: 13px;
-font-weight: 13px;
 border-right: 10px;
 border-radius: 20px;
 transition: background 0.5s , transform 0.5s;
 box-shadow: 1px 1px 20px #012290f7,
-1px 1px 40px #0053b8f7
+1px 1px 40px #0053b8f7;
+opacity: 0;
+animation: fadeIn 0.8s ease forwards;
 
 }
 .project-card h3{
@@ -290,6 +303,7 @@ box-shadow: 1px 1px 20px #012290f7,
 }
 .project-card:hover{
     transform: translateY(-10px);
+   
 }
 
 .project-card img{
@@ -300,6 +314,10 @@ object-fit: contain;
 max-height: 180px;
 display: block;
 margin: auto;
+}
+.project-card img:hover{
+transform: scale(1.05);
+transition: 0.3s;
 }
 .tech span{
 background:white;
@@ -318,18 +336,29 @@ text-decoration: none;
 background:#0ef;
 color: #051129;
 border-radius:20px;
-opacity: 1;
-animation: slideTop 1s ease forwards;
-animation-delay: 2s;
 box-shadow: 0 0 5px #0ef,
 0 0 25px #0ef;
 padding: 8px 15px;
 font-size: 12px;
+transition: 0.3s;
 }
 .project-card a:hover{
      box-shadow: 0 0 5px cyan,
     0 0 25px cyan, 0 0 50px cyan;
+}
 
+.project-card:nth-child(1){ animation-delay: 0.2s; }
+.project-card:nth-child(2){ animation-delay: 0.4s; }
+.project-card:nth-child(3){ animation-delay: 0.6s; }
+@keyframes fadeIn{
+  from{
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 /* contact*/
 .contact {
