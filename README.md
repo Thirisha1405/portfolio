@@ -13,4 +13,4 @@ HTML, CSS, JavaScript
 ## 🔗 Live
 https://thirisha1405.github.io/portfolio/
 
- Check out my projects and feel free to connect!
+Check out my projects and feel free to connect!
